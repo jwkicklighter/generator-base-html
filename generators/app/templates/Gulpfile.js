@@ -17,7 +17,7 @@ gulp.task('serve', ['clean:build', 'html', 'sass', 'js'], function () {
 
   gulp.watch('./app/scss/**/*', ['sass'])
   gulp.watch('./app/js/**/*', ['js'])
-  gulp.watch('./app/*.html'['html'])
+  gulp.watch('./app/*.html', ['html'])
 })
 
 // Compile sass into CSS & auto-inject into browsers
@@ -38,6 +38,7 @@ gulp.task('js', function () {
 gulp.task('html', function () {
   return gulp.src('./app/*.html')
     .pipe(gulp.dest('./build'))
+    .pipe(browserSync.stream())
 })
 
 gulp.task('clean:build', function () {
