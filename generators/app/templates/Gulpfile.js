@@ -6,7 +6,7 @@ var runSequence = require('run-sequence')
 var browserify = require('gulp-browserify')
 
 var browserifyOptions = {
-  transform: 'hbsfy'
+  <% if (useHandlebars) { %>transform: 'hbsfy'<% } %>
 }
 
 // Static Server + watching scss/html files

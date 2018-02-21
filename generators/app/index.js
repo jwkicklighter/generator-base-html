@@ -52,9 +52,10 @@ module.exports = class extends Generator {
       this.templatePath('.gitignore'),
       this.destinationPath('.gitignore')
     )
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath('Gulpfile.js'),
-      this.destinationPath('Gulpfile.js')
+      this.destinationPath('Gulpfile.js'),
+      { useHandlebars: this.props.useHandlebars }
     )
 
     // All app/ files
@@ -89,13 +90,13 @@ module.exports = class extends Generator {
       'gulp-browserify',
       'gulp',
       'gulp-sass',
-      'hbsfy',
       'del',
       'browser-sync',
       'run-sequence'
     ], { 'dev': true })
 
     if (this.props.useHandlebars) {
+      this.yarnInstall(['hbsfy'], { 'dev': true })
       this.yarnInstall(['handlebars'])
     }
   }
