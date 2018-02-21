@@ -1,19 +1,16 @@
 {
   "name": "generator-base-html",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
-  "homepage": "",
   "author": {
     "name": "Jordan Kicklighter",
-    "email": "jwkicklighter@gmail.com",
-    "url": ""
+    "email": "jwkicklighter@gmail.com"
   },
   "files": [
     "generators"
   ],
   "main": "generators/index.js",
   "keywords": [
-    "",
     "yeoman-generator"
   ],
   "devDependencies": {
