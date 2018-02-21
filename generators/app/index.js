@@ -52,6 +52,10 @@ module.exports = class extends Generator {
       this.templatePath('.gitignore'),
       this.destinationPath('.gitignore')
     )
+    this.fs.copy(
+      this.templatePath('.vscode'),
+      this.destinationPath('.vscode')
+    )
     this.fs.copyTpl(
       this.templatePath('Gulpfile.js'),
       this.destinationPath('Gulpfile.js'),
