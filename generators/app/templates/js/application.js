@@ -1,1 +1,3 @@
-console.log('Hello there')
+const Utils = require('./utils.js')
+
+console.log('Application loaded successfully')
